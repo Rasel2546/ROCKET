@@ -6,7 +6,7 @@
 }
 
 #background{
-    background: -webkit-radial-gradient(rgb(1, 6, 49), rgb(34, 100, 112) );
+    background-image:url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80) ;
     width: 900px;
     height: 900px;
     position: relative;
@@ -20,7 +20,7 @@
     left:500px;
     top:800px;
     background-color: brown;
-    -webkit-transition-duration: 10s;
+    -webkit-transition: top 10s;
 }
 
 #ship.launched{
