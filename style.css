@@ -1,62 +1,104 @@
-#screen{
-    position:absolute;
-    left:700px;
+#screen {
+    position: absolute;
+    left: 700px;
     background-color: gray;
     width: 1200px;
 }
 
-#background{
-    background-image:url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80) ;
+#background {
+    background-image: url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
     width: 900px;
     height: 900px;
     position: relative;
-    left:300px;
-    top:0;
-    
+    left: 300px;
+    top: 0;
+
 }
 
-#ship{
+#ship {
     position: absolute;
-    left:500px;
-    top:800px;
+    left: 500px;
+    top: 800px;
     background-color: brown;
-    -webkit-transition: top 10s;
+    transition: 10s;
 }
 
-#ship.launched{
+#ship.launched {
     position: absolute;
-    left:500px;
-    top:100px;
+    left: 500px;
+    top: 100px;
     background-color: brown;
 }
 
-#button{
+#button {
     position: absolute;
-    left:400px;
-    top:200px;
+    left: 400px;
+    top: 200px;
+    height: 30px;
+    width: 90px;
+    background-color: blue;
+    padding-top: 10px;
+    padding-left: 30px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bolder;
+
+}
+
+#button.launched {
+    position: absolute;
+    left: 400px;
+    top: 200px;
     height: 30px;
     width: 90px;
     background-color: red;
     padding-top: 10px;
     padding-left: 30px;
-    border: 2px solid black ;
+    border: 2px solid black;
     border-radius: 4px;
     font-size: 18px;
     font-weight: bolder;
-
 }
 
-#button.launched{
+#F {
+    float: left;
+    font-size: x-large;
+}
+
+#S {
+    float: left;
     position: absolute;
-    left:400px;
-    top:200px;
-    height: 50px;
-    width: 130px;
+    top: 50px;
+    font-size: x-large;
+}
+
+#refill {
+    position: absolute;
+    left: 400px;
+    top: 250px;
+    height: 30px;
+    width: 90px;
     background-color: blue;
-    text-align: center;
-    border: 2px solid black ;
+    padding-top: 10px;
+    padding-left: 30px;
+    border: 2px solid black;
     border-radius: 4px;
     font-size: 18px;
     font-weight: bolder;
 }
 
+#refill.filling {
+    position: absolute;
+    left: 400px;
+    top: 250px;
+    height: 30px;
+    width: 90px;
+    background-color: red;
+    padding-top: 10px;
+    padding-left: 30px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bolder;
+}

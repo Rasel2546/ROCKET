@@ -1,28 +1,47 @@
-var ship = document.getElementById("ship");
-var button = document.getElementById("button");
-var show = document.getElementById("F")
-var fuel = 40;
-function less() {
-  fuel = fuel - 5;
+const ship = document.getElementById("ship");
+const button = document.getElementById("button");
+let fuel = 200
+const fuelScreen = document.getElementById("F")
+
+fuelScreen.innerHTML = "Fuel: " + fuel
+
+const remain = function () {
+  if (ship.className == "launched") {
+    if (fuel < 0) {
+      ship.className = "";
+      button.innerHTML = "launch";
+      fuelScreen.innerHTML = "Out of fuel";
+
+      clearInterval(remain);
+    } else {
+      fuelScreen.innerHTML = "Fuel: " + fuel
+      fuel -= 1
+    }
+  }
 }
+const Timer = setInterval(remain, 50)
 
+button.onclick = function () {
 
-
-button.onclick = function(){
-  
-  if(ship.className == "launched"){
+  if (ship.className == "launched") {
     //if ship already launched start landing sequence 
     ship.className = "";
-    button.innerHTML = "launch";
-    less()
-    
-  }else{
+    button.innerHTML = "Launch";
+    button.className = ""
+  } else {
     //else launch the ship 
     ship.className = "launched";
     button.innerHTML = "land";
+    button.className = "launched"
 
   }
-  show.innerHTML = "fuel:" + fuel;
 };
+
+let refillB = document.getElementById("refill")
+let refillScreen = document.getElementById("S")
+refillB.onclick = function () {
+  fuel = 200
+  fuelScreen.innerHTML = "Fuel: " + fuel
+}
 
 
