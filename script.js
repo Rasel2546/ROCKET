@@ -2,6 +2,11 @@ const ship = document.getElementById("ship");
 const button = document.getElementById("button");
 let fuel = 200
 const fuelScreen = document.getElementById("F")
+const changeColor = function () {
+  button.style.backgroundColor = "red";
+  clearInterval(changeColor);
+};
+
 
 fuelScreen.innerHTML = "Fuel: " + fuel
 
@@ -40,8 +45,15 @@ button.onclick = function () {
 let refillB = document.getElementById("refill")
 let refillScreen = document.getElementById("S")
 refillB.onclick = function () {
-  fuel = 200
-  fuelScreen.innerHTML = "Fuel: " + fuel
+  if (ship.className = "land") {
+    fuel = 200
+    fuelScreen.innerHTML = "Fuel: " + fuel
+    setInterval(changeColor, 2000)
+  } else {
+    fuelScreen.innerHTML = `Fuel: ${fuel} \n Please land first`
+
+
+  }
 }
 
 
